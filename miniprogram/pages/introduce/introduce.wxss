@@ -1,0 +1,39 @@
+/* miniprogram/pages/introduce/introduce.wxss */
+.content{
+  padding:30rpx 20rpx 0;
+}
+.title1{
+  font-weight: bold;
+  font-size: 40rpx;
+  text-align: center;
+  padding: 20rpx 20rpx ;
+  background: #00ffea4f;
+  font-family: "幼圆";
+}
+
+.text{
+  padding: 10rpx 20rpx ;
+  text-align: left;
+  background: #00ffea4f;
+  line-height: 52rpx;
+  font-family: "幼圆";
+}
+.saoyisao{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00ffea4f;
+  padding: 40rpx 0;
+  margin-bottom: 20rpx;
+  border-bottom-right-radius:10rpx;
+ border-bottom-left-radius:10rpx;
+}
+.saoyisao image{
+  border-radius: 50%;
+}
+.top1_right{
+  width: 370rpx;
+  height: 300rpx;
+  align-items:baseline;
+}

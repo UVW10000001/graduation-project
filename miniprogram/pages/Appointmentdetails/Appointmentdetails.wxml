@@ -1,0 +1,35 @@
+<!--miniprogram/pages/Appointmentdetails/Appointmentdetails.wxml-->
+<view >
+  <top-assembly inner-text="预约详情"></top-assembly>
+  <view class="content">
+    <view class="item_center">
+          <!--<image src="https://p.extrabux.top/1_1/20201216/1608108250333164.png"></image>-->
+          <view class="item_center_right">
+            <view>状态：{{Appointmentdetails.done}}</view>
+          </view>
+    </view>
+    <view class="item_text item_title">基本信息</view>
+    <view class="item_text border_bottom">
+      <view>姓名</view>
+      <view>{{Appointmentdetails.user_name}}</view>
+    </view>
+    <view class="item_text border_bottom">
+      <view>手机</view>
+      <view>{{Appointmentdetails.phone}}</view>
+    </view>
+    <view class="item_text item_title">宠物信息</view>
+    <view class="item_text border_bottom">
+      <view>宠物名字</view>
+      <view>{{Appointmentdetails.Pets_name}}</view>
+    </view>
+    <view class="item_text border_bottom">
+      <view>洗护套餐</view>
+      <view>{{Appointmentdetails.bath_combo}}</view>
+    </view>
+    <view class="item_text border_bottom">
+      <view>预约的时间</view>
+      <view>{{Appointmentdetails.bath}}</view>
+    </view>
+  </view>
+  
+</view>

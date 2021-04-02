@@ -1,0 +1,47 @@
+/* pages/leave/leave.wxss */
+.wrap{
+  text-align: center;
+}
+picker{
+  border:2rpx solid skyblue;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40rpx;
+  border-radius: 30rpx;
+}
+.type,.tel{
+  border:2rpx solid skyblue;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40rpx;
+}
+.text{
+  /* border: 1rpx solid red; */
+  text-align: left;
+  margin-top: 40rpx;
+  width: 80%;
+  margin-left: 10%
+}
+textarea{
+  border: 1rpx solid skyblue;
+  text-align: left;
+  width: 90%;
+  margin-left:5%; 
+  margin-top: 20rpx;
+}
+
+.submit{
+  border: 2rpx solid skyblue;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: skyblue;
+  border-radius: 30rpx;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40rpx;
+  color: white;
+}
