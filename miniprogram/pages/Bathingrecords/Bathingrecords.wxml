@@ -16,10 +16,6 @@
               <view class="item_center_right">
                 <view>一只小狗勾</view>
                 <view>共计次数：{{item.differenceDate_cs}}</view>
-                <view class="item_center_right_money"> 
-                  <view>{{item.Discount * 10}}折优惠{{item.money * item.differenceDate_cs}}</view> 
-                  <view>￥{{(item.money * item.differenceDate_cs) * item.Discount}}</view>
-                </view>
               </view>
           </view>
           <view class="item_bottom">

@@ -42,6 +42,7 @@
         bind:input="Pets_name"
         error-message="{{err_Pets_name}}"
       />
+    
     <van-cell title="选择洗护时间" value="{{ date }}" bind:click="onDisplay" is-link label="{{err_Bath_date}}"/>
     <van-calendar
       show="{{ show }}"
@@ -75,6 +76,7 @@
       readonly
       input-align="right"
     />
+    <date day="18" bindtap="click"></date>
     <!--<van-field
       value="{{shop_arr.Discount*10}}折优惠￥{{money}}"
       label="金额"

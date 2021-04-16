@@ -28,7 +28,6 @@
   align-items: center;
   justify-content: space-between;
 }
-
 .top1_left{
   display: flex;
   align-items: center;

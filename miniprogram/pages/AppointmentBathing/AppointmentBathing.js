@@ -22,54 +22,22 @@ Page({
     },
      columns: ['套餐A', '套餐B', '套餐C'],
      BathingCombo:'套餐A',
-    fileList: [], // 宠物照片 及 防疫照片的临时照片
-    delDBData: [], //云存储中要被删除的文件列表
+ //   fileList: [], // 宠物照片 及 防疫照片的临时照片
+ //   delDBData: [], //云存储中要被删除的文件列表
     user_name:'',// 预约姓名
     err_user_name: '',// 姓名格式错误的提示信息
     phone:'',// 预约手机号
     err_phone:"",// 手机号码格式错误的提示信息
     Pets_name:'',// 宠物姓名
     err_Pets_name: '',// 宠物姓名格式错误的提示信息
-     err_bath_date: '', // 洗护时间为空  原err_feed_date
-     err_bath_combo: '',// 洗护套餐为空 原err_feed_frequency
-    pets_Photo:[],// 宠物照片id
-    differenceDate:0,// 总共的日期天数
+     err_bath_date: '', // 洗护时间为空  
+     err_bath_combo: '',// 洗护套餐为空 
+  //  pets_Photo:[],// 宠物照片id
+  //  differenceDate:0,// 总共的日期天数
     differenceDate_cs:0, // 总洗护次数
-     Bathingtimes: 1,// 洗护次数  原Feedingtimes
-    money:0,// 金额
-    shop_arr:null, // 店铺相关数据
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    // 
-    this.shop_arr(options.id)
-  },
-  // 获取店铺相关数据
-  shop_arr(id){
-    wx.showLoading({
-      title: '加载中',
-      icon:'none',
-    })
-    wx.cloud.callFunction({
-      // 云函数名称
-      name: 'ID_query',
-      // 传给云函数的参数
-      data: {
-        database: 'community_Arr',
-        id: id,
-      },
-    })
-    .then(res => {
-      // console.log(res.result.data)
-      this.setData({
-        shop_arr:res.result.data
-      })
-      wx.hideLoading()
-    })
-    .catch(console.error)
+    Bathingtimes: 1,// 洗护次数  
+  //  money:0,// 金额
+  //  shop_arr:null, // 店铺相关数据
   },
   // 数据校验
   user_name(e) {
@@ -115,8 +83,11 @@ Page({
   onClose() {
     this.setData({ show: false });
   },
+  click(e){
+    console.log('e',e)
+  },
   // 日期转化
-  formatDate(date) {
+ /* formatDate(date) {
     date = new Date(date);
     return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
   },
@@ -147,9 +118,9 @@ Page({
     if (this.data.date){
       this.setData({ err_feed_date:''})
     }
-  },
+  },*/
   // 洗护套餐选择 picker 事件
-  onChange(event) {
+  /*onChange(event) {
     const { picker, value, index } = event.detail;
     let index_money = index + 1
     this.setData({
@@ -158,7 +129,7 @@ Page({
       differenceDate_cs:parseInt(this.data.differenceDate /index_money),
       money:parseInt(this.data.differenceDate / index_money) * this.data.shop_arr.money
     })
-  },
+  },*/
   // 洗护套餐隐藏
   onClose1() {
     this.setData({ show1: false });
@@ -171,7 +142,7 @@ Page({
     this.setData({ show1: false });
   },
   // 洗护套餐确认
-  onConfirm_pv(e){
+  /*onConfirm_pv(e){
     // console.log(e.detail.index)
     let index_money = e.detail.index + 1
     this.setData({
@@ -183,7 +154,7 @@ Page({
     if(this.data.BathingCombo){
       this.setData({ err_feed_combo:''})
     }
-  },
+  },*/
          uploadToData() {
           // 写入数据库
           db.collection('order').add({
@@ -195,10 +166,10 @@ Page({
               BathingCombo: this.data.BathingCombo,
               //differenceDate:this.data.differenceDate,
              // bathingtimes:this.data.Bathingtimes,
-              money:this.data.shop_arr.money,
+             // money:this.data.shop_arr.money,
               Discount:this.data.shop_arr.Discount,
              // differenceDate_cs:this.data.differenceDate_cs,
-              community_id:this.data.shop_arr._id,
+             // community_id:this.data.shop_arr._id,
               done:1,
             },
           })

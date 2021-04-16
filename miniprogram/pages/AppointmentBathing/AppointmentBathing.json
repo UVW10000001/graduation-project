@@ -7,6 +7,8 @@
     "van-picker": "@vant/weapp/picker/index",
     "van-popup": "@vant/weapp/popup/index",
     "van-uploader": "@vant/weapp/uploader/index",
-    "van-button": "@vant/weapp/button/index"
-  }
+    "van-button": "@vant/weapp/button/index",
+    "date": "../../pages/date/date"
+  },
+    "navigationBarTitleText": "门店预约"
 }

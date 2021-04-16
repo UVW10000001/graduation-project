@@ -44,7 +44,7 @@ Page({
         value:'通过'
       },
       thing4:{
-        value:'请及时支付订单费用，以便开始服务'
+        value:'请按时到达，以便开始服务'
       }
     }
     // 调起客户端小程序订阅消息界面，返回用户订阅消息的操作结果。
@@ -66,52 +66,7 @@ Page({
       }
     })
   },
-  // 发起支付
-  pay(e){
-    // console.log(e.currentTarget.dataset.money)
-    // 小程序代码
-    wx.cloud.callFunction({
-      name: 'payment',
-      data: {
-        money:e.currentTarget.dataset.money * 100,
-        // money:1
-      },
-      success: res => {
-        // console.log(res)
-        const payment = res.result.payment
-        wx.requestPayment({
-          ...payment,
-          success (res) {
-            // console.log('pay success', res)
-            // 支付成功
-            if(res.errMsg === 'requestPayment:ok'){
-              db.collection('order').doc(e.currentTarget.dataset.id).update({
-                // data 传入需要局部更新的数据
-                data: {
-                  // 表示将 done 字段置为 true
-                  done: 2
-                },
-                success: function(res) {
-                  // console.log(res.data)
-                  wx.navigateTo({
-                     url: '/pages/Bathingrecords/Bathingrecords',
-                  })
-                }
-              })
-            }
-          },
-          fail (err) {
-            wx.showToast({
-              title: '支付失败',
-              icon:'none'
-            })
-            // console.error('pay fail', err)
-          }
-        })
-      },
-      fail: console.error,
-    })
-  },
+  
   details(e){
     // console.log(e.currentTarget.dataset.id)
     wx.navigateTo({

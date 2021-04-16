@@ -1,151 +1,147 @@
 {
-	"miniprogramRoot": "miniprogram/",
-	"cloudfunctionRoot": "cloudfunctions/",
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": true,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": true,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"useMultiFrameRuntime": true,
-		"useApiHook": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"packNpmManually": false,
-		"packNpmRelationList": []
-	},
-	"appid": "wxae3b42a262a0e2d8",
-	"projectname": "%E6%B3%8A%E5%AE%A0",
-	"libVersion": "2.12.0",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-	"compileType": "miniprogram",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": 0,
-					"name": "pages/details/details",
-					"pathName": "pages/details/details",
-					"query": "id=9b61b9ba5f0ae6c200204d5341e5a15b",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/index2",
-					"pathName": "pages/index/index2",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/AppointmentBathing/AppointmentBathing",
-					"pathName": "pages/AppointmentBathing/AppointmentBathing",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/AppointmentSuccessful/AppointmentSuccessful",
-					"pathName": "pages/AppointmentSuccessful/AppointmentSuccessful",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "temp/topAssembly/topAssembly",
-					"pathName": "temp/topAssembly/topAssembly",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "temp/topAssembly/topAssembly",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/bathingOrder/bathingOrder",
-					"pathName": "pages/bathingOrder/bathingOrder",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/Appointmentdetails/Appointmentdetails",
-					"pathName": "pages/Appointmentdetails/Appointmentdetails",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/Bathingrecords/Bathingrecords",
-					"pathName": "pages/Bathingrecords/Bathingrecords",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/bathingOrder/bathingOrder",
-					"pathName": "pages/bathingOrder/bathingOrder",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/introduce/introduce",
-					"pathName": "pages/introduce/introduce",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/details/details",
-					"pathName": "pages/details/details",
-					"scene": null
-				}
-			]
-		}
-	}
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "appid": "wxd550a591ced54d32",
+  "projectname": "%E6%B3%8A%E5%AE%A0",
+  "libVersion": "2.16.0",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "compileType": "miniprogram",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+          "query": "id=9b61b9ba5f0ae6c200204d5341e5a15b",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index2",
+          "pathName": "pages/index/index2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/AppointmentBathing/AppointmentBathing",
+          "pathName": "pages/AppointmentBathing/AppointmentBathing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/AppointmentSuccessful/AppointmentSuccessful",
+          "pathName": "pages/AppointmentSuccessful/AppointmentSuccessful",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "temp/topAssembly/topAssembly",
+          "pathName": "temp/topAssembly/topAssembly",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "temp/topAssembly/topAssembly",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/bathingOrder/bathingOrder",
+          "pathName": "pages/bathingOrder/bathingOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/Appointmentdetails/Appointmentdetails",
+          "pathName": "pages/Appointmentdetails/Appointmentdetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/Bathingrecords/Bathingrecords",
+          "pathName": "pages/Bathingrecords/Bathingrecords",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/bathingOrder/bathingOrder",
+          "pathName": "pages/bathingOrder/bathingOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/introduce/introduce",
+          "pathName": "pages/introduce/introduce",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

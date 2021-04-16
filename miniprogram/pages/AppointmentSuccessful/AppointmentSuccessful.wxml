@@ -10,6 +10,6 @@
   </view>
   <view style="height:152rpx;"></view>
   <view class="success_title">恭喜您</view>
-  <view class="success_value">预约成功，稍后客服人员将联系你，对相关信息进行确认。并支付订单</view>
+  <view class="success_value">预约成功，稍后客服人员将联系你，对相关信息进行确认。</view>
   <view class="look_order" bindtap="bathingOrder">查看订单</view>
 </view>
