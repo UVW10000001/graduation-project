@@ -1,7 +1,7 @@
 
 .my{
-  padding: 160rpx 40rpx 350rpx 40rpx;
-  background: url("https://lh3.googleusercontent.com/proxy/IBBaixhBq0T37dyiNYp2wGotavoE-sbWDNnvar975M3FQihs2hZlAupB77LebuQRlIzQh0oKFSkBNb7lx4nzo8GT8g")
+  padding: 160rpx 40rpx 550rpx 40rpx;
+  background: url("https://ss2.baidu.com/6ON1bjeh1BF3odCf/it/u=674293905,2374511523&fm=15&gp=0.jpg")
 }
 .login{
   display: flex;

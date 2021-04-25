@@ -1,4 +1,3 @@
-// pages/AppointmentFeeding.js
 // 初始化数据库
 const db = wx.cloud.database()
 Page({
@@ -119,17 +118,7 @@ Page({
       this.setData({ err_feed_date:''})
     }
   },*/
-  // 洗护套餐选择 picker 事件
-  /*onChange(event) {
-    const { picker, value, index } = event.detail;
-    let index_money = index + 1
-    this.setData({
-      Bathingtimes:index_money,
-      BathingCombo: value,
-      differenceDate_cs:parseInt(this.data.differenceDate /index_money),
-      money:parseInt(this.data.differenceDate / index_money) * this.data.shop_arr.money
-    })
-  },*/
+
   // 洗护套餐隐藏
   onClose1() {
     this.setData({ show1: false });
@@ -141,60 +130,36 @@ Page({
   onCancel(){
     this.setData({ show1: false });
   },
-  // 洗护套餐确认
-  /*onConfirm_pv(e){
-    // console.log(e.detail.index)
-    let index_money = e.detail.index + 1
-    this.setData({
-      BathingCombo: e.detail.value,
-      show1: false,
-      differenceDate_cs:parseInt(this.data.differenceDate /index_money),
-      money:parseInt(this.data.differenceDate / index_money) * this.data.shop_arr.money
-    })
-    if(this.data.BathingCombo){
-      this.setData({ err_feed_combo:''})
-    }
-  },*/
-         uploadToData() {
-          // 写入数据库
-          db.collection('order').add({
-            data: { // 要插入的数据
-              user_name: this.data.user_name,
-              phone: this.data.phone,
-              date: this.data.date,   
-              Pets_name:this.data.Pets_name,
-              BathingCombo: this.data.BathingCombo,
-              //differenceDate:this.data.differenceDate,
-             // bathingtimes:this.data.Bathingtimes,
-             // money:this.data.shop_arr.money,
-              Discount:this.data.shop_arr.Discount,
-             // differenceDate_cs:this.data.differenceDate_cs,
-             // community_id:this.data.shop_arr._id,
-              done:1,
-            },
-          })
-            .then(res => {
-              console.log()
-              if (res.errMsg === 'collection.add:ok') {
-                wx.hideLoading()
-                // 重置
-                this.setData({
-                  user_name:'',
-                  phone:'',
-                  date:'',
-                  BathingCombo:'',
-               // pets_Photo:'',
-                  fileList:'',
-                  Pets_name:''
-                })
-                wx.navigateTo({
-                  url: '/pages/AppointmentSuccessful/AppointmentSuccessful',
-                })
-              }
-      })
- 
-        .catch(e => {
-          wx.showToast({ title: '上传失败', icon: 'none' });
+  uploadToData() {
+  // 写入数据库
+  db.collection('order').add({
+    data: { // 要插入的数据
+      user_name: this.data.user_name,
+      phone: this.data.phone,
+      date: this.data.date,   
+      Pets_name:this.data.Pets_name,
+      BathingCombo: this.data.BathingCombo,
+      done:1,
+    },
+  })
+    .then(res => {
+      console.log()
+      if (res.errMsg === 'collection.add:ok') {
+        wx.hideLoading()
+        // 重置
+        this.setData({
+          user_name:'',
+          phone:'',
+          date:'',
+          BathingCombo:'',
+        // pets_Photo:'',
+          fileList:'',
+          Pets_name:''
+        })
+        wx.navigateTo({
+          url: '/pages/AppointmentSuccessful/AppointmentSuccessful',
+        })
+      }
   })
   },
   // 上传图片的方法
@@ -229,10 +194,6 @@ Page({
       })
       return false
     }
-    /*
-    wx.showLoading({})
-    // 上传图片
-    this.uploadToCloud()*/
   },   
   /**
    * 生命周期函数--监听页面初次渲染完成

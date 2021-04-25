@@ -31,3 +31,11 @@
 .tab-bar-item view {
   font-size: 10px;
 }
+.item-view {
+font-size: 10px;
+}
+.item-image {
+  width: 27px;
+  height: 27px;
+}
+

@@ -5,35 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    startTime: "",
-   // endTime: "",
-    type: "",
-    tel: "",
+    date: "",
+    BathingCombo: "",
     reson: ""
   },
 
   //预约的开始时间
-  getStartTime(e) {
+  getDate(e) {
     console.log(e.detail.value);
     this.setData({
-      startTime: e.detail.value
+      date: e.detail.value
     })
   },
-  /*getEndTime(e) {
-    this.setData({
-      endTime: e.detail.value
-    })
-  },
-  */
   //套餐类型
-  getType(e) {
+  getBathingCombo(e) {
     this.setData({
-      type: e.detail.value
-    })
-  },
-  getTel(e) {
-    this.setData({
-      tel: e.detail.value
+      BathingCombo: e.detail.value
     })
   },
   //评价
@@ -50,53 +37,31 @@ Page({
     var info = wx.getStorageSync("Order");
     //请求参数
     var reqData = {
-      startTime: this.data.startTime,
-      //endTime: this.data.endTime,
-      user_name: info.user_name,
-      //phone: info.phone,
-      pet_name: pet_name,
-      type: this.data.type,
-      contact: this.data.phone,
-      //评价
+      date: this.data.startTime,
+      BathingCombo: this.data.BathingCombo,
       comment: this.data.reson
     };
-    if (reqData.startTime == "") {
+    if (reqData.date == "") {
       wx.showToast({
         title: '请选择开始时间',
         icon: 'none'
       });
       return;
     }
-    /*if (reqData.endTime == "") {
-      wx.showToast({
-        title: '请选择结束时间',
-        icon: 'none'
-      });
-      return;
-    }*/
-    if (reqData.type == "") {
+    if (reqData.BathingCombo == "") {
       wx.showToast({
         title: '请输入套餐类型',
         icon: 'none'
       });
       return;
     }
-    if (reqData.contact == "") {
-      wx.showToast({
-        title: '请输入联系方式',
-        icon: 'none'
-      });
-      return;
-    }
-    /*if (reqData.comment == "") {
+    if (reqData.comment == "") {
       wx.showToast({
         title: '备注',
         icon: 'none'
       });
       return;
     }
-    */
-
     var that = this;
     //发起请求
     wx.request({
@@ -115,15 +80,12 @@ Page({
         });
         //将刚才填写的信息清空
         that.setData({
-          startTime: "",
-          //endTime: "",
-          type: "",
-          tel: "",
+          data: "",
+          BathingCombo: "",
           reson: ""
         })
       }
     })
-
   },
   /**
    * 生命周期函数--监听页面加载

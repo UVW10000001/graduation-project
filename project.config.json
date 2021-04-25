@@ -31,7 +31,8 @@
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "showShadowRootInWxmlPanel": true
   },
   "appid": "wxd550a591ced54d32",
   "projectname": "%E6%B3%8A%E5%AE%A0",
