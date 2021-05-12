@@ -1,0 +1,29 @@
+<!--pages/comment/comment.wxml-->
+<view class="comment">
+  <view class="comment-bg">
+    <image src="https://pic4.zhimg.com/v2-218ebd4540a1d0602f040729139c6cd5_720w.jpg?source=172ae18b" style="width: 705rpx; height: 461rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image>
+  </view>
+  <view class="comment-mask"></view>
+  <view class="comment-info">
+    <view class="info-div">
+      <view class="info-title">{{ detail.title }}</view>
+      <view>{{ detail.pubdate }}</view>
+    </view>
+  </view>
+  <view class="info-summary">{{ detail.summary }}</view>
+  <!-- 评价 -->
+  <van-cell-group>
+  <van-field
+    value="{{ content }}"
+    placeholder="请输入评价叭"
+    border="{{ false }}"
+    bind:change="onContentChange"
+  />
+  </van-cell-group>
+  <van-rate value="{{ score }}" bind:change="onScoreChange" />
+  <view>
+    <image src="{{ item }}" wx:for="{{images}}" wx:key="index" class="comment-img"></image>
+  </view>
+  <van-button type="warning" bindtap="uploadImg">上传图片</van-button>
+  <van-button type="danger" size="large" bindtap="submit">提交</van-button>
+</view>

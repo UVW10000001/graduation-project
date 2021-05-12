@@ -1,0 +1,34 @@
+<!--miniprogram/pages/Appointmentdetails/Appointmentdetails.wxml-->
+<view >
+  <top-assembly inner-text="预约详情"></top-assembly>
+  <view class="content">
+    <view class="item_center">
+          <view class="item_center_right">
+            <view style="position: relative; left: 2rpx; top: 2rpx; font-family: '幼圆'">您已预约成功，请准时带您的小可爱来哦{{done}}</view>
+          </view>
+    </view>
+    <view class="item_text item_title">基本信息</view>
+    <view class="item_text border_bottom">
+      <view>姓名</view>
+      <view>{{uname}}</view>
+    </view>
+    <view class="item_text border_bottom">
+      <view>手机</view>
+      <view>{{phone}}</view>
+    </view>
+    <view class="item_text item_title">宠物信息</view>
+    <view class="item_text border_bottom">
+      <view>宠物名字</view>
+      <view>{{pname}}</view>
+    </view>
+    <view class="item_text border_bottom">
+      <view>洗护套餐</view>
+      <view>{{combo}}</view>
+    </view>
+    <view class="item_text border_bottom">
+      <view>预约的时间</view>
+      <view>{{date}}</view>
+    </view>
+  </view>
+  
+</view>

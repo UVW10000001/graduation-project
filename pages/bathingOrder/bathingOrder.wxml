@@ -1,0 +1,22 @@
+<!--miniprogram/pages/bathingOrder/bathingOrder.wxml-->
+  <view>
+  <top-assembly inner-text="预约洗护"></top-assembly>
+    <view class="content" style="width: 750rpx; height: 1051rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx; position: fixed">
+        <view class="item_center" style="position: relative; left: 0rpx; top: 200rpx">
+          <view class="item_text border_bottom" style="width: 593rpx; height: 97rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+            <view>姓名</view>
+            <view style="width: 490rpx; height: 64rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">{{uname}}</view>
+      </view>
+   
+  </view>
+      <view class="item_center" style="position: relative; left: 0rpx; top: 586rpx">
+        <view class="item_text border_bottom" style="width: 620rpx; height: 113rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+      <view style="width: 173rpx; height: 44rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">预约的时间</view>
+      <view style="width: 397rpx; height: 64rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">{{date}}</view>
+    </view>
+        </view>
+      </view>
+      <view class="item_bottom">
+        <view class="phone" catchtap="myphone" style="width: 368rpx; height: 91rpx; display: flex; box-sizing: border-box; left: -187rpx; top: 488rpx; position: relative">电话联系</view>
+      </view>
+  </view>

@@ -1,0 +1,27 @@
+<!--miniprogram/pages/Bathingrecords/Bathingrecords.wxml-->
+<view>
+  <top-assembly inner-text="洗护记录"></top-assembly>
+  <view class="content">
+    <scroll-view scroll-y="true" style="height: 100%;">
+        <view class="item" bindtap="details" wx:for="{{bathingOrder}}" wx:key="*this" data-id="{{item._id}}" hidden="{{item.done == 1}}">
+          <view class="item_top">
+              <view class="item_top_left">
+                <view>预约人：{{item.username}}</view>
+                <view>洗护时间段：{{item.date}}</view>
+              </view>
+              <view class="item_top_right {{item.done == 2 ? 'item_top_right_active':''}}">{{item.done == 2 ? '进行中':'已完成'}}</view>
+          </view>
+          <view class="item_center">
+              <image src="zhuye.jpg"></image>
+              <view class="item_center_right">
+                <view>一只小狗勾</view>
+              </view>
+          </view>
+          <view class="item_bottom">
+              <view class="phone" catchtap="myphone">电话联系</view>
+          </view>
+        </view>
+        <view class="no_records" >暂无更多洗护记录~</view>
+    </scroll-view>
+  </view>
+</view>

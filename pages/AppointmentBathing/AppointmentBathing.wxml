@@ -1,0 +1,83 @@
+<!--pages/AppointmentBathing.wxml-->
+<view>
+<!-- 顶部 -->
+  <view class="top_box">
+    <view class="top_box_left">
+      <image bindtap="back" src="../../image/back.png"></image>
+      <image bindtap="back_index" src="../../image/icon_index.png"></image>
+    </view>
+    <view>洗香香预约</view>
+  </view>
+  <view style="height:152rpx;"></view>
+  <view style="width: 750rpx; height: 1180rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view class="Bathing_title">一只小狗勾</view>
+    <view class="Bathing_1">基本信息</view>
+    <van-cell-group >
+      <van-field
+        value="{{ username }}"
+        label="姓名"
+        placeholder="请输入姓名"
+        input-align="right"
+        input-class="username"
+        bind:input="username"
+        error-message="{{err_username}}"
+      />
+      <van-field
+        value="{{ phone }}"
+        label="手机号"
+        placeholder="请输入手机号"
+        error-message="{{err_phone}}"
+        input-align="right"
+        border="{{ true }}"
+        bind:blur="phone"
+        type="number"
+      />
+    </van-cell-group>
+    <van-field
+        value="{{ petname }}"
+        label="宠物姓名"
+        placeholder="请输入宠物姓名"
+        input-align="right"
+        input-class="petname"
+        bind:input="petname"
+        error-message="{{err_petname}}"
+      />
+    
+    <van-cell title="选择洗护时间" value="{{ date }}" bind:click="btnClick" is-link label="{{err_date}}"/>
+        <yycalendar 
+        show='{{isShow}}' 
+        beginTime="{{beginTime}}" 
+        endTime="{{endTime}}" 
+        timeGap="{{timeGap}}" 
+        themeColor="{{themeColor}}" 
+        showOverdue="{{showOverdue}}" 
+        calendarType="{{calendarType}}" 
+        days="{{days}}"
+        time="{{time}}"
+        bind:yybindchange="_yybindchange" 
+        bind:yybindhide="_yybindhide"
+       />            
+       
+
+    <van-cell title="请选择洗护套餐" is-link bind:click="showPopup" value="{{combo}}" label="{{err_combo}}"/>
+      <van-popup
+        show="{{ show1 }}"
+        round
+        position="bottom"
+        custom-style="height: 40%"
+        bind:close="onClose1"
+      >
+    <van-picker 
+      columns="{{ columns }}"
+      show-toolbar
+      title="请选择洗护套餐"
+      bind:change="onChange"
+      bind:cancel="onCancel"
+      bind:confirm="onConfirm_pv"
+      confirm-button-text="确定"
+      cancel-button-text="取消"
+       />
+    </van-popup>
+    <view class="book" bindtap="book" style="width: 674rpx; height: 91rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">立即预约</view>
+  </view>
+</view>
