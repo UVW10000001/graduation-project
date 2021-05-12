@@ -1,6 +1,0 @@
-<view>
- <top-assembly inner-text="一只小狗勾"></top-assembly>
- <view class="content">
-   <image style="width:100%;height:560rpx;display:block;border-top-left-radius:10rpx;border-top-right-radius:10rpx;" src="https://g-search1.alicdn.com/img/bao/uploaded/i2/839942079/O1CN01yk6Qsx1REE3yVvI7z_!!0-item_pic.jpg_300x300.jpg"></image>
-    </view>
-    </view>
